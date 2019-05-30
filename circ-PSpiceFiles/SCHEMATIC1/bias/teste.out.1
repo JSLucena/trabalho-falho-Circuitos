@@ -1,0 +1,353 @@
+
+**** 05/30/19 17:12:30 ******* PSpice Lite (April 2011) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-teste"  [ C:\Cadence\circ-pspicefiles\schematic1\teste.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "teste.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CIRC
+E_U1         N14790 0 VALUE {LIMIT(V(0,N14773)*1E6,-15V,+15V)} _U1 0 N14773 1G
+
+E_U2         N14825 0 VALUE {LIMIT(V(0,N14808)*1E6,-15V,+15V)} _U2 0 N14808 1G
+
+E_U3         N15551 0 VALUE {LIMIT(V(0,N15214)*1E6,-15V,+15V)} _U3 0 N15214 1G
+
+E_U4         N15252 0 VALUE {LIMIT(V(0,N15235)*1E6,-15V,+15V)} _U4 0 N15235 1G
+
+E_U5         N15294 0 VALUE {LIMIT(V(0,N15277)*1E6,-15V,+15V)} _U5 0 N15277 1G
+
+E_U6         N15652 0 VALUE {LIMIT(V(0,N15457)*1E6,-15V,+15V)} _U6 0 N15457 1G
+
+E_U7         N15687 0 VALUE {LIMIT(V(0,N15670)*1E6,-15V,+15V)} _U7 0 N15670 1G
+
+R_R1         N14773 N14790  1 TC=0,0 
+R_R2         N14808 N14825  1 TC=0,0 
+R_R3         N15214 N15551  1 TC=0,0 
+R_R4         N15235 N15252  1 TC=0,0 
+R_R5         N15277 N15294  1 TC=0,0 
+E_U8         N15387 0 VALUE {LIMIT(V(0,N15370)*1E6,-15V,+15V)} _U8 0 N15370 1G
+
+R_R6         N15370 N15387  1 TC=0,0 
+R_R7         N15294 N15370  1 TC=0,0 
+R_R8         N15670 N15652  1 TC=0,0 
+R_R9         N15687 N15670  1 TC=0,0 
+C_C1         N16219 N14773  1  TC=0,0 
+C_C2         N14790 N14808  0.1  TC=0,0 
+C_C3         N15687 N15214  0.1  TC=0,0 
+C_C4         N15687 N15235  1  TC=0,0 
+C_C5         N15252 N15277  0.01  TC=0,0 
+R_R10         N15457 N15652  1 TC=0,0 
+R_R11         N15551 N15457  1 TC=0,0 
+R_R12         N15387 N15457  1 TC=0,0 
+R_R13         N14825 N15457  1 TC=0,0 
+R_R14         N15457 N16219  1 TC=0,0 
+V_V3         N16219 0  
++SIN 0 1 10 0 0 0
+
+**** RESUMING teste.cir ****
+.END
+
+**** 05/30/19 17:12:30 ******* PSpice Lite (April 2011) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-teste"  [ C:\Cadence\circ-pspicefiles\schematic1\teste.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14773)    0.0000 (N14790)    0.0000 (N14808)    0.0000 (N14825)    0.0000     
+
+(N15214)    0.0000 (N15235)    0.0000 (N15252)    0.0000 (N15277)    0.0000     
+
+(N15294)    0.0000 (N15370)    0.0000 (N15387)    0.0000 (N15457)    0.0000     
+
+(N15551)    0.0000 (N15652)    0.0000 (N15670)    0.0000 (N15687)    0.0000     
+
+(N16219)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  54.59E-09.
+         Time step =  582.1E-21, minimum allowable step size =  1.000E-18
+
+  These supply currents failed to converge:
+
+    I(E_U1)                   =     24.00A  \     21.68A
+    I(E_U3)                   =   149.56uA  \   147.57uA
+    I(E_U6)                   =   202.07pA  \   200.08pA
+    I(E_U7)                   =  -172.66uA  \  -170.66uA
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14773) 3.338E-06 (N14790)   -3.3383 (N14808)   -3.3383 (N14825)   15.0000     
+
+(N15214) 74.78E-12 (N15235) 97.87E-12 (N15252)-97.87E-06 (N15277)-15.98E-06     
+
+(N15294)   15.0000 (N15370) 15.00E-06 (N15387)  -15.0000 (N15457) 101.0E-18     
+
+(N15551)-74.78E-06 (N15652)-101.0E-12 (N15670)-101.0E-18 (N15687) 101.0E-12     
+
+(N16219) 3.430E-06 
+
+
+**** Interrupt ****
+
+ **** Published Runtime Parameters *****************************
+                                                               
+                                       ABSTOL =      1.0000E-12
+                                      C_C1.ic =      0.0000E+00
+                                   C_C1.value =      1.0000E+00
+                                      C_C2.ic =      0.0000E+00
+                                   C_C2.value =      1.0000E-01
+                                      C_C3.ic =      0.0000E+00
+                                   C_C3.value =      1.0000E-01
+                                      C_C4.ic =      0.0000E+00
+                                   C_C4.value =      1.0000E+00
+                                      C_C5.ic =      0.0000E+00
+                                   C_C5.value =      1.0000E-02
+                                         GMIN =      1.0000E-12
+                                         ITL1 =      1.5000E+02
+                                         ITL2 =      2.0000E+01
+                                         ITL4 =      1.0000E+01
+                                     R_R1.tc1 =      0.0000E+00
+                                     R_R1.tc2 =      0.0000E+00
+                                   R_R1.value =      1.0000E+00
+                                    R_R10.tc1 =      0.0000E+00
+                                    R_R10.tc2 =      0.0000E+00
+                                  R_R10.value =      1.0000E+00
+                                    R_R11.tc1 =      0.0000E+00
+                                    R_R11.tc2 =      0.0000E+00
+                                  R_R11.value =      1.0000E+00
+                                    R_R12.tc1 =      0.0000E+00
+                                    R_R12.tc2 =      0.0000E+00
+                                  R_R12.value =      1.0000E+00
+                                    R_R13.tc1 =      0.0000E+00
+                                    R_R13.tc2 =      0.0000E+00
+                                  R_R13.value =      1.0000E+00
+                                    R_R14.tc1 =      0.0000E+00
+                                    R_R14.tc2 =      0.0000E+00
+                                  R_R14.value =      1.0000E+00
+                                     R_R2.tc1 =      0.0000E+00
+                                     R_R2.tc2 =      0.0000E+00
+                                   R_R2.value =      1.0000E+00
+                                     R_R3.tc1 =      0.0000E+00
+                                     R_R3.tc2 =      0.0000E+00
+                                   R_R3.value =      1.0000E+00
+                                     R_R4.tc1 =      0.0000E+00
+                                     R_R4.tc2 =      0.0000E+00
+                                   R_R4.value =      1.0000E+00
+                                     R_R5.tc1 =      0.0000E+00
+                                     R_R5.tc2 =      0.0000E+00
+                                   R_R5.value =      1.0000E+00
+                                     R_R6.tc1 =      0.0000E+00
+                                     R_R6.tc2 =      0.0000E+00
+                                   R_R6.value =      1.0000E+00
+                                     R_R7.tc1 =      0.0000E+00
+                                     R_R7.tc2 =      0.0000E+00
+                                   R_R7.value =      1.0000E+00
+                                     R_R8.tc1 =      0.0000E+00
+                                     R_R8.tc2 =      0.0000E+00
+                                   R_R8.value =      1.0000E+00
+                                     R_R9.tc1 =      0.0000E+00
+                                     R_R9.tc2 =      0.0000E+00
+                                   R_R9.value =      1.0000E+00
+                                       RELTOL =      1.0000E-03
+                                       RUNFOR =      0.0000E+00
+                                         TMAX =      0.0000E+00
+                                        TSTOP =      1.0000E-06
+                                      V_V3.ac =      0.0000E+00
+                                 V_V3.acphase =      0.0000E+00
+                                      V_V3.dc =      0.0000E+00
+                                        VNTOL =      1.0000E-06
+                                               
+               
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  54.59E-09.
+         Time step =  582.1E-21, minimum allowable step size =  1.000E-18
+
+  These supply currents failed to converge:
+
+    I(E_U1)                   =     24.00A  \     21.68A
+    I(E_U3)                   =   149.56uA  \   147.57uA
+    I(E_U6)                   =   202.07pA  \   200.08pA
+    I(E_U7)                   =  -172.66uA  \  -170.66uA
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14773) 3.338E-06 (N14790)   -3.3383 (N14808)   -3.3383 (N14825)   15.0000     
+
+(N15214) 74.78E-12 (N15235) 97.87E-12 (N15252)-97.87E-06 (N15277)-15.98E-06     
+
+(N15294)   15.0000 (N15370) 15.00E-06 (N15387)  -15.0000 (N15457) 101.0E-18     
+
+(N15551)-74.78E-06 (N15652)-101.0E-12 (N15670)-101.0E-18 (N15687) 101.0E-12     
+
+(N16219) 3.430E-06 
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-012
+**** Param: VNTOL = 1e-006
+**** Param: GMIN = 1e-012
+**** Param: TSTOP = 1e-006
+**** Param: TMAX = 0
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 10
+
+ **** Published Runtime Parameters *****************************
+                                                               
+                                       ABSTOL =      1.0000E-12
+                                      C_C1.ic =      0.0000E+00
+                                   C_C1.value =      1.0000E+00
+                                      C_C2.ic =      0.0000E+00
+                                   C_C2.value =      1.0000E-01
+                                      C_C3.ic =      0.0000E+00
+                                   C_C3.value =      1.0000E-01
+                                      C_C4.ic =      0.0000E+00
+                                   C_C4.value =      1.0000E+00
+                                      C_C5.ic =      0.0000E+00
+                                   C_C5.value =      1.0000E-02
+                                         GMIN =      1.0000E-12
+                                         ITL1 =      1.5000E+02
+                                         ITL2 =      2.0000E+01
+                                         ITL4 =      1.0000E+01
+                                     R_R1.tc1 =      0.0000E+00
+                                     R_R1.tc2 =      0.0000E+00
+                                   R_R1.value =      1.0000E+00
+                                    R_R10.tc1 =      0.0000E+00
+                                    R_R10.tc2 =      0.0000E+00
+                                  R_R10.value =      1.0000E+00
+                                    R_R11.tc1 =      0.0000E+00
+                                    R_R11.tc2 =      0.0000E+00
+                                  R_R11.value =      1.0000E+00
+                                    R_R12.tc1 =      0.0000E+00
+                                    R_R12.tc2 =      0.0000E+00
+                                  R_R12.value =      1.0000E+00
+                                    R_R13.tc1 =      0.0000E+00
+                                    R_R13.tc2 =      0.0000E+00
+                                  R_R13.value =      1.0000E+00
+                                    R_R14.tc1 =      0.0000E+00
+                                    R_R14.tc2 =      0.0000E+00
+                                  R_R14.value =      1.0000E+00
+                                     R_R2.tc1 =      0.0000E+00
+                                     R_R2.tc2 =      0.0000E+00
+                                   R_R2.value =      1.0000E+00
+                                     R_R3.tc1 =      0.0000E+00
+                                     R_R3.tc2 =      0.0000E+00
+                                   R_R3.value =      1.0000E+00
+                                     R_R4.tc1 =      0.0000E+00
+                                     R_R4.tc2 =      0.0000E+00
+                                   R_R4.value =      1.0000E+00
+                                     R_R5.tc1 =      0.0000E+00
+                                     R_R5.tc2 =      0.0000E+00
+                                   R_R5.value =      1.0000E+00
+                                     R_R6.tc1 =      0.0000E+00
+                                     R_R6.tc2 =      0.0000E+00
+                                   R_R6.value =      1.0000E+00
+                                     R_R7.tc1 =      0.0000E+00
+                                     R_R7.tc2 =      0.0000E+00
+                                   R_R7.value =      1.0000E+00
+                                     R_R8.tc1 =      0.0000E+00
+                                     R_R8.tc2 =      0.0000E+00
+                                   R_R8.value =      1.0000E+00
+                                     R_R9.tc1 =      0.0000E+00
+                                     R_R9.tc2 =      0.0000E+00
+                                   R_R9.value =      1.0000E+00
+                                       RELTOL =      1.0000E-03
+                                       RUNFOR =      0.0000E+00
+                                         TMAX =      0.0000E+00
+                                        TSTOP =      1.0000E-06
+                                      V_V3.ac =      0.0000E+00
+                                 V_V3.acphase =      0.0000E+00
+                                      V_V3.dc =      0.0000E+00
+                                        VNTOL =      1.0000E-06
+                                               
+               
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  54.59E-09.
+         Time step =  582.1E-21, minimum allowable step size =  1.000E-18
+
+  These supply currents failed to converge:
+
+    I(E_U1)                   =     24.00A  \     21.68A
+    I(E_U3)                   =   149.56uA  \   147.57uA
+    I(E_U6)                   =   202.07pA  \   200.08pA
+    I(E_U7)                   =  -172.66uA  \  -170.66uA
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14773) 3.338E-06 (N14790)   -3.3383 (N14808)   -3.3383 (N14825)   15.0000     
+
+(N15214) 74.78E-12 (N15235) 97.87E-12 (N15252)-97.87E-06 (N15277)-15.98E-06     
+
+(N15294)   15.0000 (N15370) 15.00E-06 (N15387)  -15.0000 (N15457) 101.0E-18     
+
+(N15551)-74.78E-06 (N15652)-101.0E-12 (N15670)-101.0E-18 (N15687) 101.0E-12     
+
+(N16219) 3.430E-06 
+
+
+**** Interrupt ****
